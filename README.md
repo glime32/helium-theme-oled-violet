@@ -19,10 +19,18 @@ Pour changer une couleur : modifier `theme/manifest.json` ou `pages/oled.css`, p
 
 ## Installation (une fois)
 
-1. `helium://flags/#extensions-on-chrome-urls` → **Enabled**, puis relancer Helium
-   (nécessaire pour `pages/`, sinon l'extension refuse de se charger).
-2. Télécharger les deux `.crx` depuis la page GitHub Pages.
-3. `helium://extensions` → mode développeur → glisser-déposer chaque `.crx` dans la page.
+Le glisser-déposer d'un `.crx` est refusé (`CRX_REQUIRED_PROOF_MISSING`) : Helium exige
+la signature du Web Store pour ce chemin. On passe par le lien direct à la place.
+
+1. Dans `helium://flags`, activer puis relancer Helium :
+   - `#extension-mime-request-handling` → **Always prompt for install**
+   - `#extensions-on-chrome-urls` → **Enabled** (nécessaire pour `pages/`)
+2. Ouvrir dans Helium :
+   - <https://glime32.github.io/helium-theme-oled-violet/oled-violet-theme.crx> (le thème s'applique directement)
+   - <https://glime32.github.io/helium-theme-oled-violet/oled-violet-pages.crx> → **Ajouter l'extension**
+
+Limite connue : le champ d'adresse n'est violet que quand on clique dedans. Au repos,
+Helium calcule sa couleur à partir de celle de la barre (noire → gris), un thème ne peut pas la forcer.
 
 ## Clés
 
