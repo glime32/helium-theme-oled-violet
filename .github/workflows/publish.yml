@@ -6,6 +6,7 @@ name: Publier
 on:
   push:
     branches: [main]
+    paths-ignore: ["README*.md", "docs/**"]   # pas de nouvelle version pour un README
   workflow_dispatch:
 
 permissions:
