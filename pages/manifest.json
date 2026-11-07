@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "OLED Violet – pages internes",
+  "version": "1.0.0",
+  "description": "Met les pages internes d'Helium (paramètres, extensions, historique…) en noir OLED + violet. Nécessite le flag extensions-on-chrome-urls.",
+  "update_url": "https://glime32.github.io/helium-theme-oled-violet/updates.xml",
+  "content_scripts": [
+    {
+      "matches": ["chrome://*/*"],
+      "css": ["oled.css"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
+}

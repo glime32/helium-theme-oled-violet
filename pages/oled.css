@@ -1,0 +1,116 @@
+/* OLED Violet — pages internes d'Helium (chrome:// affiché helium://).
+   Les pages internes lisent leurs couleurs dans des variables CSS définies
+   sur <html> ; elles descendent dans les shadow DOM, donc les redéfinir ici suffit. */
+html:root:not(#oled-violet) {
+  /* --- Palette --- */
+  --ov-black: #000000;
+  --ov-raised: #0d0d0d;      /* champs, menus, dialogues : à peine au-dessus du noir */
+  --ov-raised-2: #1a1a1a;
+  --ov-purple: #61008a;      /* violet principal */
+  --ov-purple-dark: #430060; /* sélection */
+  --ov-purple-bright: #8a3cff;
+  --ov-lavender: #d7adff;    /* liens / texte violet lisible */
+  --ov-text: #ebebeb;
+  --ov-text-2: #969696;
+
+  /* --- Fonds --- */
+  --color-sys-base: var(--ov-black) !important;
+  --color-sys-surface: var(--ov-black) !important;
+  --color-sys-surface1: var(--ov-black) !important;
+  --color-sys-surface2: var(--ov-black) !important;
+  --color-sys-surface3: var(--ov-raised) !important;
+  --color-sys-surface4: var(--ov-raised) !important;
+  --color-sys-surface5: var(--ov-raised) !important;
+  --color-sys-surface-section: var(--ov-black) !important;
+  --color-sys-surface-container: var(--ov-black) !important;
+  --color-sys-surface-container-low: var(--ov-black) !important;
+  --color-sys-surface-container-lowest: var(--ov-black) !important;
+  --color-sys-surface-container-high: var(--ov-raised) !important;
+  --color-sys-surface-container-highest: var(--ov-raised-2) !important;
+  --color-sys-base-container: var(--ov-black) !important;
+  --color-sys-base-container-elevated: var(--ov-raised) !important;
+  --color-sys-neutral-container: var(--ov-raised) !important;
+  --color-sys-header: var(--ov-black) !important;
+  --color-sys-header-inactive: var(--ov-black) !important;
+  --color-sys-header-container: var(--ov-raised) !important;
+  --color-sys-header-container-inactive: var(--ov-raised) !important;
+  --color-sys-omnibox-container: var(--ov-raised) !important;
+  --color-webui-page-background: var(--ov-black) !important;
+  --color-webui-card-background: var(--ov-black) !important;
+  --color-webui-dialog-background: var(--ov-raised) !important;
+  --color-settings-webui-page-background: var(--ov-black) !important;
+  --color-settings-info-card-background: var(--ov-raised) !important;
+  --cr-card-background-color: var(--ov-black) !important;
+  --color-primary-background: var(--ov-black) !important;
+  --color-window-background: var(--ov-black) !important;
+  --color-dialog-background: var(--ov-raised) !important;
+  --color-menu-background: var(--ov-raised) !important;
+  --color-textfield-background: var(--ov-raised) !important;
+  --color-toolbar-search-field-background: var(--ov-raised) !important;
+  --color-subtle-emphasis-background: var(--ov-raised) !important;
+  --color-download-manager-item-background: var(--ov-black) !important;
+  --color-nav-menu-item-background-selected: var(--ov-purple-dark) !important;
+  --color-side-panel-background: var(--ov-black) !important;
+  --color-side-panel-content-background: var(--ov-black) !important;
+  --color-side-panel-card-background: var(--ov-raised) !important;
+  --color-tooltip-background: var(--ov-raised-2) !important;
+  --color-table-background: var(--ov-black) !important;
+  --color-table-background-alternate: var(--ov-black) !important;
+  --color-table-header-background: var(--ov-black) !important;
+  --color-tree-background: var(--ov-black) !important;
+  --color-css-system-window: var(--ov-black) !important;
+  --color-css-system-scrollbar: var(--ov-black) !important;
+
+  /* --- Violet (accents) --- */
+  --color-sys-primary: var(--ov-lavender) !important;
+  --color-sys-on-primary: var(--ov-purple-dark) !important;
+  --color-sys-primary-container: var(--ov-purple) !important;
+  --color-sys-on-primary-container: #ffffff !important;
+  --color-sys-tonal-container: var(--ov-purple-dark) !important;
+  --color-sys-on-tonal-container: #ffffff !important;
+  --color-sys-base-tonal-container: var(--ov-purple-dark) !important;
+  --color-sys-on-base-tonal-container: #ffffff !important;
+  --color-sys-tonal-outline: var(--ov-purple-bright) !important;
+  --color-sys-gradient-primary: var(--ov-purple) !important;
+  --color-sys-state-focus-ring: var(--ov-purple-bright) !important;
+  --color-sys-state-ripple-primary: rgba(138, 60, 255, .32) !important;
+  --cr-checked-color: var(--ov-lavender) !important;
+  --cr-link-color: var(--ov-lavender) !important;
+  --cr-active-on-primary-background-color: rgba(138, 60, 255, .32) !important;
+  --cr-fallback-color-tonal-container: var(--ov-purple-dark) !important;
+  --cr-fallback-color-on-tonal-container: #ffffff !important;
+  --cr-fallback-color-tonal-outline: var(--ov-purple-bright) !important;
+
+  /* Interrupteurs */
+  --color-toggle-button-track-on: var(--ov-purple) !important;
+  --color-toggle-button-thumb-on: var(--ov-lavender) !important;
+  --color-toggle-button-thumb-on-hover: #ffffff !important;
+  --color-toggle-button-track-off: #2a2a2a !important;
+  --color-toggle-button-thumb-off: var(--ov-text-2) !important;
+
+  /* Texte */
+  --cr-primary-text-color: var(--ov-text) !important;
+  --cr-secondary-text-color: var(--ov-text-2) !important;
+  --color-sys-on-surface: var(--ov-text) !important;
+  --color-sys-on-surface-subtle: var(--ov-text-2) !important;
+  --color-sys-on-surface-secondary: var(--ov-text-2) !important;
+
+  background-color: var(--ov-black) !important;
+  color-scheme: dark;
+}
+
+html:root:not(#oled-violet) body {
+  background-color: var(--ov-black) !important;
+}
+
+/* helium://flags : la page a ses propres variables, posées sur <flags-app>.
+   Une règle du document posée sur l'hôte passe avant les :host de la page. */
+flags-app {
+  background: var(--ov-black) !important;
+  --toolbar-color: var(--ov-black) !important;
+  --input-background: var(--ov-raised) !important;
+  --interactive-color: var(--ov-lavender) !important;
+  --link-color: var(--ov-lavender) !important;
+  --focus-shadow-color: var(--ov-purple-bright) !important;
+}
+

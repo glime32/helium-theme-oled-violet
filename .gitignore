@@ -1,0 +1,6 @@
+# Clés de signature : gardées en local + dans les secrets GitHub, jamais dans le dépôt
+keys/
+build/
+dist/
+Cached Theme.pak
+__pycache__/

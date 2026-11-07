@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "OLED Violet",
+  "version": "1.0.0",
+  "description": "Noir OLED + violet (#61008A), repris du thème KDE OLED Violet.",
+  "update_url": "https://glime32.github.io/helium-theme-oled-violet/updates.xml",
+  "theme": {
+    "colors": {
+      "frame": [0, 0, 0],
+      "frame_inactive": [0, 0, 0],
+      "frame_incognito": [0, 0, 0],
+      "frame_incognito_inactive": [0, 0, 0],
+      "background_tab": [0, 0, 0],
+      "background_tab_inactive": [0, 0, 0],
+      "background_tab_incognito": [0, 0, 0],
+      "background_tab_incognito_inactive": [0, 0, 0],
+
+      "toolbar": [0, 0, 0],
+      "toolbar_text": [235, 235, 235],
+      "toolbar_button_icon": [138, 60, 255],
+
+      "tab_text": [255, 255, 255],
+      "tab_background_text": [150, 150, 150],
+      "tab_background_text_inactive": [150, 150, 150],
+      "tab_background_text_incognito": [150, 150, 150],
+      "tab_background_text_incognito_inactive": [150, 150, 150],
+
+      "omnibox_background": [97, 0, 138],
+      "omnibox_text": [255, 255, 255],
+      "bookmark_text": [235, 235, 235],
+
+      "ntp_background": [0, 0, 0],
+      "ntp_text": [235, 235, 235],
+      "ntp_link": [215, 173, 255],
+      "ntp_header": [97, 0, 138],
+      "ntp_section": [0, 0, 0]
+    }
+  }
+}
